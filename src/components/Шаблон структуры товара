@@ -1,0 +1,197 @@
+; ; Шаблон структуры товара
+; {
+;   "id": "product-id",
+;   "slug": "product-slug",
+;   "brand": "Бренд",
+;   "category": {
+;     "id": "категория-id",
+;     "slug": "категория-slug",
+;     "name": {
+;       "ru": "Название категории (RU)",
+;       "en": "Category Name (EN)"
+;     }
+;   },
+;   "subcategory": {
+;     "id": "подкатегория-id",
+;     "slug": "подкатегория-slug",
+;     "name": {
+;       "ru": "Название подкатегории (RU)",
+;       "en": "Subcategory Name (EN)"
+;     }
+;   },
+;   "gender": "мужской / женский / унисекс",
+;   "ageGroup": "дети / взрослые / подростки",
+;   "name": {
+;     "ru": "Название товара (RU)",
+;     "en": "Product Name (EN)"
+;   },
+;   "description": {
+;     "ru": "Описание товара (RU)",
+;     "en": "Product Description (EN)"
+;   },
+;   "features": {
+;     "material": ["Материал1", "Материал2"],
+;     "weight": "Вес",
+;     "country": "Страна производства",
+;     "seasonality": "Сезонность",
+;     "sportType": ["Спорт1", "Спорт2"],
+;     "warranty": "Гарантия",
+;     "technology": ["Технология1", "Технология2"],
+;     "insole": "Стелька",
+;     "cushioning": "Амортизация",
+;     "sole": "Подошва",
+;     "flexibility": "Гибкость",
+;     "kit": ["Что входит в комплект"]
+;   },
+;   "options": {
+;     "colors": ["Цвет1", "Цвет2"],
+;     "sizes": ["Размер1", "Размер2"]
+;   },
+;   "media": {
+;     "imagesByColor": {
+;       "Цвет1": "Ссылка на основное изображение",
+;       "Цвет2": "Ссылка на основное изображение"
+;     },
+;     "additionalImagesByColor": {
+;       "Цвет1": ["URL1", "URL2"],
+;       "Цвет2": ["URL1", "URL2"]
+;     },
+;     "fallbackImage": "URL запасного изображения"
+;   },
+;   "pricing": {
+;     "currency": "Валюта",
+;     "basePrice": 0,
+;     "minPrice": 0,
+;     "variants": [
+;       {
+;         "color": "Цвет",
+;         "size": "Размер",
+;         "price": 0,
+;         "stock": 0,
+;         "sku": "Уникальный код товара"
+;       }
+;     ]
+;   },
+;   "promotions": [
+;     { "type": "discount", "value": 0, "unit": "%", "active": true },
+;     { "type": "cashback", "value": 0, "unit": "%", "active": false },
+;     { "type": "promoCode", "code": "Код", "active": false },
+;     { "type": "gift", "value": "Описание подарка", "active": false }
+;   ],
+;   "logistics": {
+;     "fulfillment": "FBO / FBS / DBR",
+;     "deliveryEstimate": "1–3 дня",
+;     "shippingMethods": ["Курьер", "Почта", "Самовывоз"],
+;     "packaging": "Описание упаковки",
+;     "deliveryZones": ["Город1", "Город2"]
+;   },
+;   "availability": {
+;     "status": "inStock / outOfStock / preorder",
+;     "isPreorder": false,
+;     "restockDate": null
+;   },
+;   "rating": {
+;     "average": 0.0,
+;     "count": 0
+;   },
+;   "analytics": {
+;     "views": 0,
+;     "cartAdds": 0,
+;     "purchases": 0
+;   },
+;   "relations": {
+;     "relatedProductIds": ["id1", "id2"],
+;     "upsellProductIds": ["id3", "id4"],
+;     "accessories": ["id5", "id6"]
+;   },
+;   "meta": {
+;     "new": true,
+;     "bestseller": false,
+;     "tags": ["тег1", "тег2"]
+;   }
+; }
+
+; Шаблон структуры категории 
+; {
+;   "id": "category-id",
+;   "slug": "category-slug",
+;   "slugAuto": true,
+;   "name": {
+;     "ru": "Название категории (RU)",
+;     "en": "Category Name (EN)"
+;   },
+;   "description": {
+;     "ru": "Описание категории (RU)",
+;     "en": "Category Description (EN)"
+;   },
+;   "image": "URL изображения категории",
+;   "icon": {
+;     "type": "emoji | image",
+;     "value": "Иконка (например, 🆕 или URL к изображению)"
+;   },
+;   "filters": [
+;     { "name": "название фильтра", "type": "тип фильтра (select, tag, category, flag, range, size, text)" }
+;   ],
+;   "categoryType": ["promotional", "seasonal", "gendered", "discounted"],
+;   "role": "primary | seasonal | secondary",
+;   "seo": {
+;     "title": "SEO заголовок",
+;     "description": "SEO описание",
+;     "keywords": ["keyword1", "keyword2"],
+;     "index": true,
+;     "canonical": "/categories/category-slug"
+;   },
+;   "landingPageId": "landing-page-identifier",
+;   "meta": {
+;     "isFeatured": true,
+;     "isHidden": false,
+;     "sortPriority": 1,
+;     "badgeColor": "#FF3B30",
+;     "createdAt": "2024-01-15T12:00:00Z",
+;     "updatedAt": "2025-03-24T00:00:00Z",
+;     "priorityWeight": 98
+;   },
+;   "analytics": {
+;     "views": 0,
+;     "clicks": 0,
+;     "conversions": 0,
+;     "ctr": 0.0,
+;     "avgTimeOnPage": 0
+;   },
+;   "subcategories": [
+;     {
+;       "id": "subcategory-id",
+;       "slug": "subcategory-slug",
+;       "name": {
+;         "ru": "Название подкатегории (RU)",
+;         "en": "Subcategory Name (EN)"
+;       },
+;       "image": "URL изображения подкатегории",
+;       "tag": "тег для фильтрации (например, new, limited, sale)",
+;       "icon": {
+;         "type": "emoji | image",
+;         "value": "Иконка (например, 📦)"
+;       },
+;       "targetGender": "male | female | unisex",
+;       "filters": [
+;         { "name": "название фильтра", "type": "тип фильтра (select, tag, category, flag, range, size, text)" }
+;       ],
+;       "meta": {
+;         "badge": "Текстовый бейдж",
+;         "sortWeight": 1,
+;         "isHidden": false
+;       },
+;       "analytics": {
+;         "views": 0,
+;         "clicks": 0,
+;         "conversions": 0
+;       },
+;       "cta": {
+;         "text": "Текст кнопки",
+;         "url": "/catalog?category=category-id&subcategory=subcategory-id",
+;         "style": "primary | secondary | warning"
+;       }
+;     }
+;   ]
+; }
+  

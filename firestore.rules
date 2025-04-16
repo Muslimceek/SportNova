@@ -1,0 +1,20 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      // Allow read/write for authenticated users
+      allow read, write: if request.auth != null;
+      
+      // Additional validation for role field
+      allow create: if request.resource.data.role == "user";
+      allow update: if 
+        request.auth != null &&
+        request.auth.uid == userId &&
+        request.resource.data.role == resource.data.role;
+      
+      // Only allow admin role changes from server-side
+      match /admin {
+        allow read, write: if false;
+      }
+    }
+  }
+}
